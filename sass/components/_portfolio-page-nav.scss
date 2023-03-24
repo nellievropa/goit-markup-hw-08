@@ -1,0 +1,51 @@
+.portfolio {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+/*UL- Navigation by page  */
+.portfolio-page__nav {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    margin-bottom: 50px;
+    list-style: none;
+}
+
+.portfolio-page__nav-btn {
+    margin-right: 8px;
+}
+
+.portfolio-page__nav-btn:last-child {
+    margin-right: 0;
+}
+
+.button-secondary {
+    display: inline-block;
+    text-align: center;
+    padding: 6px 22px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: calc(26 / 16);
+    letter-spacing: 0.03em;
+    cursor: pointer;
+
+    border-radius: 4px;
+    border: none;
+
+    color: $text-color-main;
+    background-color: $background-color-light;
+
+    /* border: 2px solid transparent; - прозрачная рамка если нужно */
+    transition: color 250ms $timing-function,
+        background-color 250ms $timing-function,
+        box-shadow 250ms $timing-function;
+
+        &:hover, &:focus {
+            background-color: $brand-color;
+                color: $white;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+}
+

@@ -1,0 +1,503 @@
+/* .backdrop {
+  position: fixed;
+  top: 0;
+  left: 0; */
+  /* bottom: 0;
+    right: 0; */
+  /* width: 100%;
+  height: 100%;
+  background-color: brown;
+  opacity: 0.3; */
+
+
+  /* display: flex;
+    justify-content: center;
+    align-items: center; не самій удачній вариант */
+/* } */
+
+/* .backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+} */
+/* .modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+
+}  */
+
+p {
+  /* user-select: none;  - не даст скопировать текст!!! */
+}
+
+
+/* встпливаючі вікна */
+.menu {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+/* li */
+.menu-item {
+  position: relative;
+  margin-right: 15px;
+  outline: 2px solid yellowgreen;
+}
+.menu-item:hover .submenu {
+  display: block;
+}
+.menu-link {
+  display: block;
+  padding: 15px 25px;
+
+  text-decoration: none;
+  background-color: aqua;
+  color: black;
+}
+
+.submenu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+
+  width: 100%;
+
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+  background-color: rgb(192, 140, 240);
+
+  display: none;
+}
+.submenu a {
+  text-decoration: none;
+}
+
+.feature-section {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+/* button animation */
+.btn {
+  display: inline-flex;
+  border: none;
+  margin: 0;
+  margin-bottom: 50px;
+
+  padding: 20px 50px;
+  border-radius: 8px;
+  background-color: teal;
+  color: antiquewhite;
+  font: inherit;
+  cursor: pointer;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1) 300ms;
+  /* - запис в одну строку */
+  /* transition-delay: 1000ms; */
+
+  /* transition-property: background-color, transform;
+  transition-duration: 1000ms;
+  transition-timing-function: linear;
+  transition-delay: 0; */
+}
+.btn:hover,
+.btn:focus {
+  background-color: darksalmon;
+  color: blueviolet;
+  /* transform: rotate(180deg); */
+}
+
+/* BUTTON with animation */
+
+.btn1 {
+  position: relative;
+  display: inline-flex;
+  border: none;
+  margin: 0;
+  margin-bottom: 50px;
+  margin-left: 50px;
+
+  padding: 20px 50px;
+  border-radius: 8px;
+  background-color: teal;
+  color: antiquewhite;
+  font: inherit;
+  cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* чтобы спрятать элементы которые находятся за границами кнопки */
+  overflow: hidden;
+}
+
+/* оптимизируем CSS и віносим общие стили бифор и афтер в общее описание */
+.btn1::after, .btn1::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn1::before {
+  /* content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px; */
+  margin-right: 12px;
+
+  /* background-color: darkorange; */
+
+  /* задали переход анимирований елементу  transform */
+  /* transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+
+  background-image: url(../images/icons/twitter\ 1.svg);
+
+  /* виносим в общее описание */
+  background-size: contain;
+  /* вписать в размер блока  */
+}
+
+.btn1::after {
+  position: absolute;
+
+  /* куда позиционируем */
+
+  top: 50%;
+  left: 50px;
+
+  /* чтобы спозиционировать элемент афтер относительно кнопки и елемента бифор */
+  /* подбираем или вісчитіваем пиксели, чтоб точно попасть */
+  transform: translateY(calc(-50% + 45px));
+  /* подними себя на половину своей вісоті */
+  /* transform: translateY(-50%); */
+
+ 
+
+  /* общие свойства винесли в общее описание вище */
+  /* content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px; */
+    /* transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+    /* background-size: contain; */
+
+  /* background-color: pink; */
+  background-image: url(../images/icons/instagram\ 2.svg);
+  
+}
+/* сместить єлемент бифор с кнопки вверх при Ховере */
+.btn1:hover::before, .btn1:focus::before {
+  transform: translateY(-45px);
+}
+.btn1:hover::after, .btn1:focus::after {
+  transform: translateY(-50%);
+}
+
+.btn1:hover,
+.btn1:focus {
+  background-color: darksalmon;
+  color: blueviolet;
+  /* transform: rotate(180deg); */
+}
+
+
+
+/* Пункт меню с подчеркиванием! */
+
+.menu-link {
+    position: relative;
+}
+.menu-link::after {
+content: '';
+/* позицинионируем его абсолютно относительно ссілки */
+position: absolute;
+
+left: 0;
+bottom: 0;
+
+display: block;
+/* width: 100%; для обічного подчеркивания */
+
+/* ефект виїзжаючого підкреслення */
+width: 100%;
+height: 5px;
+background-color: red;
+
+/* скріть елемент 1 */
+/* display: none; */
+
+/* срити елемент правильно! 2 */
+/* opacity: 0; */
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+transform: scaleX(0);
+}
+
+.menu-link:hover::after {
+  /* скріть елемент 1 */  
+    /* display: block; */
+  
+    /* срити елемент правильно! 2 */
+opacity: 1;
+/* виїджаюче підкреслення */
+/* width: 100%; */
+transform: scaleX(1);
+}
+
+/* эффект виъджаючого оверлея */
+
+.product-thumb {
+  width: 370px;
+  /* height: 294px; */
+  position: relative;
+
+/* щоб сховати оверфлоу до його появи на карточці */
+overflow: hidden;
+
+margin-left: auto;
+margin-right: auto;
+  margin-bottom: 50px;
+}
+.product-thumb::before {
+  display: inline-block;
+  content: '';
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+background-color: rgba(255, 150, 0, 0.5);
+
+transform: translateX(-100%);
+/* анімуємо оверлей */
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+/* opacity: 0; */
+}
+.product-thumb:hover::before {
+  opacity: 1;
+
+  /* потрібно робити на всю карту, бо тут тільки на фотку!!! */
+  transform: translateX(0);
+}
+
+/* Модальне вікно!!! */
+/* .backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+}
+.backdrop.is-hidden {
+  opacity: 1;
+  pointer-events: none;
+} */
+/* те, що ми бачимо, коли модалка схована */
+.backdrop.is-hidden .modal {
+  /* transform: scale(0.8); */
+}
+
+те, як воно виглядає
+.modal{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  min-width: 400px;
+  min-height: 100px;
+  padding: 15px;
+
+  background-color: beige;
+  transform: translate(-50%, -50%) scale(0.5);
+}
+
+
+/* Form for add information */
+
+textarea {
+  resize: none;
+}
+
+.form {
+  width: 600px;
+  outline: 2px dashed yellowgreen;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  margin-bottom: 300px;
+}
+.form-fild {
+  position: relative;
+  /* outline: 1px solid blueviolet; */
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  background-color: aqua;
+}
+
+.form-label {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  background-color: teal;
+  transform: translateY(-50%);
+  color: aliceblue;
+  transition: tramsform 250ms linear;
+}
+/* .form-fild label {
+  margin-bottom: 4 px;
+} */
+.form-fild input {
+  margin: 0;
+  /* margin-top: 5px; */
+
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px dashed palevioletred;
+  /* font-size: 25px; */
+}
+/* варіант як можно зробити ширину рамки на весь блок*/
+
+/* .form-fild input {
+  width: 100%;
+} */
+
+/* метка - она должна стоять после инпута (сосед добавляется "+"), чтоб ее можно біло описать */
+ .form-input:focus + .form-label,
+ .form-input:not(:placeholder-shown) + .form-label {
+  color:red;
+  transform: translateY(-50px);
+ }
+ .form-input:placeholder-shown {
+  background-color: aqua;
+ }
+
+.form-fild input::placeholder {
+  color: blueviolet;
+  /* text-align: right; */
+}
+
+/* скривваємо чекбокс від браузера і встановлюємо кастомний */
+/* appearence- влстивість, яка обнуляє всі налаштування від браузера */
+ul {
+  list-style: none;
+}
+/* Input */
+.checkbox {
+  /* appearance: none;
+  position: absolute; круто, але підтримується не всіма браузерами, тому ховаємо за допомогою візуал хідден*/
+position: absolute;
+width: 1px;
+height: 1px;
+margin: -1px;
+border: 0;
+padding: 0;
+clip: rect(0 0 0 0);
+overflow: hidden;
+
+}
+/* Label */
+.field {
+  display: flex;
+  align-items: center;
+  outline: 1px solid green;
+}
+
+.checkbox-icon {
+ 
+  display: inline-block;
+
+  width: 16px;
+  height: 15px;
+  border: 1px solid black;
+  border-radius: 2px;
+  background-color: turquoise;
+  margin-right: 10px;
+
+  transition: transform 250ms linear;
+}
+.checkbox:checked + .checkbox-icon {
+  transform: scale(1.5);
+  border-color: blue;
+  background-color: blue;
+  background-image: url(../images/icons/Vector\ \(2\).svg);
+  background-size: contain;
+  background-origin: border-box;
+}
+
+.label {
+  transition: transform 250ms linear;
+}
+.checkbox:checked ~ .label {
+  transform: translateX(20px);
+}
+
+
+
+.group {
+margin-bottom: 24px;
+}
+.group-title {
+  margin-top: 0;
+}
+/* як стилізувати чекбокси і запишем стилізацію через тип (не задаючи зайвий класс) */
+.topic-options,
+.experience-option {
+  padding: 0;
+  margin: 32px;
+  list-style: none;
+}
+.topic-options li,
+.experience-option li {
+  display: flex;
+  align-items: center;
+}
+.topic-options input[type="checkbox"] {
+  width: 36px;
+  height: 36px;
+  margin-right: 12px;
+ /* border-radius: 50%; не працює, бо чекбокси важко стилізуються*/
+}
+
+.topic-options label {
+  font-size: 30px;
+}
+
+.experience-option input {
+  width: 36px;
+  height: 36px;
+  margin-right: 12px;
+}
+.experience-option label {
+  font-size: 30px;
+}
+/* стилізуємо дату  */
+.form .date {
+  border-color: brown;
+  border-width: 5px;
+  padding: 20ox 40px;
+  font-size: 32px;
+  color: green;
+  background-color: aquamarine;
+}
+/* З ІНПУТ не працюють Бифор і Афтер, бо немає контенту!!! */
+.comment {
+  padding: 25px;
+  font-size: 25px;
+}

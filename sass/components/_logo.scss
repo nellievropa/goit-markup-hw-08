@@ -1,0 +1,22 @@
+.logo {
+    
+    text-decoration: none;
+    color: $black;
+    font-family: "Raleway";
+    font-weight: 700;
+    font-size: 26px;
+    line-height: calc(31 / 26);
+    letter-spacing: 0.03em;
+   
+    // transition: color 250ms var(--timing-function);
+    &:hover {
+      color: $text-color-gray;
+    }
+  }
+  .logo__text-brand {
+    color: $brand-color;
+    // transition: color 250ms var(--timing-function);
+  }
+    .logo__text-brand:hover {
+    color: $text-color-gray;
+  }

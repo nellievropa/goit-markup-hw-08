@@ -1,0 +1,14 @@
+
+.page-header {
+  border-bottom: 1px solid #ececec;
+}
+.main-nav {
+  display: flex;
+  align-items: center;
+  /* вирівняє вдоль пеперечної осі */
+  /* justify-content: space-between; */
+}
+.container.main-nav {
+  padding-bottom: 0;
+  /* border-bottom: 1px solid #ececec; */
+}
