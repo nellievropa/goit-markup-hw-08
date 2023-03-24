@@ -31,6 +31,53 @@
 p {
   /* user-select: none;  - не даст скопировать текст!!! */
 }
+.page-header {
+  border-bottom: 2px solid black;
+}
+.page-header .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 80px;
+}
+.container {
+  padding-left: 24px;
+  padding-right: 24px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.company-logo {
+  @extend %link;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: lightgreen;
+  color: black;
+}
+.section {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.section-title {
+  margin-top: 0;
+  margin-bottom: 24 px;
+}
+.feature-set {
+@extend %list;
+}
+
+.feature-item {
+text-align: center;
+padding-top: 20px;
+padding-bottom: 20px;
+color: ffffff;
+font-size: 32px;
+
+}
+
+$colors: "#F44336", "#3F5185", "#4CAF50", "#00BCD4", "#E91E63", "#009688";
+
+@include colorsize($colors, ".feature-item");
 
 
 /* встпливаючі вікна */
