@@ -2,6 +2,13 @@
     padding-top: 94px;
     padding-bottom: 94px;
 
+    @media screen and (max-width: 479px) {
+        padding-top: 60px;
+        padding-bottom: 0;
+        width: 480px;
+    }
+    
+
 }
 
 .feature-section .container {
@@ -30,6 +37,11 @@
     width: 270px;
     height: 248px;
     margin-right: 30px;
+
+    @media screen and (max-width: 479px) {
+        width: 480px;
+        margin-right: 0;
+    }
 }
 
 .feature-section__item:nth-child(4) {
@@ -43,6 +55,10 @@
     height: 120px;
     background-color: $background-color-light;
     margin-bottom: 30px;
+
+    @media screen and (max-width: 479px) {
+        width: 100%;
+    }
 }
 
 .feature-section__icon {
@@ -65,6 +81,12 @@
     line-height: calc(16 / 14);
     letter-spacing: 0.03em;
     text-transform: uppercase;
+
+    @media screen and (max-width: 479px) {
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .feature-section__descr {

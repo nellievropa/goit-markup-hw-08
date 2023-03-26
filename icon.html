@@ -60,6 +60,21 @@
   <div class="container">
     <nav class="nav">
       <a class="company-logo"  href="">LOGOTIP</a>
+      <button type="button" class="menu-button is-open"
+      aria-expanded="false"
+      aria-controls="menu-container"
+      data-menu-button
+      >
+        <svg width="40" height="40"
+        aria-label="Перемикач мобільного меню">
+          <use class="icon-close" href="./images/sprite.svg#icon-close-18dp"></use>
+          <use class="icon-menu" href="./images/sprite.svg#icon-menu_40px"></use>
+        </svg>
+      </button>
+
+      <div class="menu-container" id="menu-container"
+      data-menu
+      >Контент меню</div>
     </nav>
   </div>
 </div>
@@ -83,14 +98,14 @@
     </div>
   </section>
 
-  <section class="section reiews">
+  <section class="section reviews">
     <div class="container">
       <h2 class="section-title">Second Section Title</h2>
 
-      <ul class="reiews-set">
-        <li class="reiews-item">1</li>
-        <li class="reiews-item">2</li>
-        <li class="reiews-item">3</li>
+      <ul class="reviews-set">
+        <li class="reviews-item">1</li>
+        <li class="reviews-item">2</li>
+        <li class="reviews-item">3</li>
       </ul>
     </div>
   </section>
@@ -500,5 +515,6 @@
           });
       })();
     </script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

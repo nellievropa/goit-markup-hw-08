@@ -9,6 +9,19 @@
   /* justify-content: space-between; */
 }
 .container.main-nav {
+  position: relative;
   padding-bottom: 0;
-  /* border-bottom: 1px solid #ececec; */
+
+  // padding: 94px 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (max-width: 479px) {
+    width: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ 
+    
+  }
 }
