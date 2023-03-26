@@ -30,39 +30,44 @@
           ><span class="logo__text-brand">Web</span>Studio</a
         >
         <!-- site-nav -->
-        <ul class="site-nav">
-          <li class="site-nav__item">
-            <a
-              href="./index.html"
-              class="site-nav__link site-nav__link--current"
-              >Студія</a
-            >
-          </li>
-          <li class="site-nav__item">
-            <a href="./portofolio.html" class="site-nav__link">Портфоліо</a>
-          </li>
-          <li class="site-nav__item">
-            <a href="#" class="site-nav__link">Контакти</a>
-          </li>
-        </ul>
-
-        <!-- contact-nav -->
-        <ul class="contact-nav">
-          <li class="contact-nav__item">
-            <a href="mailto:info@devstudio.com" class="contact-nav__link"
-              ><svg class="contact-nav__icon" width="16" height="12">
-                <use href="./images/sprite.svg#envelope"></use></svg
-              >info@devstudio.com</a
-            >
-          </li>
-          <li class="contact-nav__item">
-            <a href="tel:+380961111111" class="contact-nav__link"
-              ><svg class="contact-nav__icon" width="10" height="16">
-                <use href="./images/sprite.svg#smartphone"></use></svg
-              >+38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        <div class="menu-container is-open" id="menu-container" data-menu>
+          <div class="navigation">
+            <ul class="site-nav">
+              <li class="site-nav__item">
+                <a
+                  href="./index.html"
+                  class="site-nav__link site-nav__link--current"
+                  >Студія</a
+                >
+              </li>
+              <li class="site-nav__item">
+                <a href="./portofolio.html" class="site-nav__link">Портфоліо</a>
+              </li>
+              <li class="site-nav__item">
+                <a href="#" class="site-nav__link">Контакти</a>
+              </li>
+            </ul>
+          </div>
+          <!-- contact-nav -->
+          <div class="contacts">
+            <ul class="contact-nav">
+              <li class="contact-nav__item">
+                <a href="mailto:info@devstudio.com" class="contact-nav__link"
+                  ><svg class="contact-nav__icon" width="16" height="12">
+                    <use href="./images/sprite.svg#envelope"></use></svg
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="contact-nav__item">
+                <a href="tel:+380961111111" class="contact-nav__link"
+                  ><svg class="contact-nav__icon" width="10" height="16">
+                    <use href="./images/sprite.svg#smartphone"></use></svg
+                  >+38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
 
         <!-- Кнопка і вікно для мобільної версії-->
 
@@ -73,10 +78,7 @@
           aria-controls="menu-container"
           data-menu-button
         >
-          <svg 
-          width="40" 
-          height="40" 
-          aria-label="Перемикач мобільного меню">
+          <svg width="40" height="40" aria-label="Перемикач мобільного меню">
             <use
               class="icon-close"
               href="./images/sprite.svg#icon-close-18dp"
@@ -88,9 +90,9 @@
           </svg>
         </button>
 
-        <div class="menu-container" id="menu-container" data-menu>
+        <!-- <div class="menu-container" id="menu-container" data-menu>
           Контент меню
-        </div>
+        </div> -->
       </div>
     </header>
 
