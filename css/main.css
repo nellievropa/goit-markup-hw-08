@@ -253,9 +253,6 @@ a {
   font-size: 40px;
   color: black;
 }
-.menu-container.is-open {
-  display: block;
-}
 @media screen and (max-width: 767px) {
   .menu-container {
     display: none;
@@ -264,10 +261,15 @@ a {
     left: 0;
     width: 100%;
   }
+  .menu-container.is-open {
+    display: block;
+  }
 }
 @media screen and (min-widht: 768px) {
   .menu-container {
     display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
   }
 }
 
@@ -315,7 +317,6 @@ a {
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
-  width: 696px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.3636363636;

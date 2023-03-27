@@ -33,20 +33,24 @@
     text-align: center;
     font-size: 40px;
     color: black;
-
-    &.is-open {
-        display: block;
-    }
+ 
+    
 @media screen and (max-width: 767px) {
     display: none;
     position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
+
+        &.is-open {
+            display: block;
   
+}
 }
 @media screen and (min-widht: 768px){
     display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
     
 }
 }
