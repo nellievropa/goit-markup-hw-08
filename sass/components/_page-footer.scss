@@ -4,9 +4,9 @@
     flex-direction: row;
     justify-content: flex-start;
 
-    @media screen and (max-width: 479px) {
+    @media screen and (max-width: 767px) {
         display: block;
-        max-width: 480px;
+        width: 100%;
         align-items: center;
 
     }
@@ -24,6 +24,16 @@
     margin-left: 0;
     margin-right: 70px;
     width: 231px;
+
+    @media screen and (max-width: 767px) {
+        display: block;
+        align-items: center;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 60px;
+               
+    }
  }
 
 /* Logo */
@@ -32,6 +42,7 @@
     &:hover {
         color: $text-color-gray;
     }
+ 
 }
 
 .page-footer__address-link {
@@ -42,6 +53,12 @@
     line-height: calc(24 / 14);
     letter-spacing: 0.03em;
     cursor: pointer;
+
+    @media screen and (max-width: 767px) {
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .page-footer-nav__list {

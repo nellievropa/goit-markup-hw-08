@@ -5,7 +5,7 @@
     text-align: center;
   
     max-width: 1600px;
-    height: 600px;
+    // height: 600px;
     margin-right: auto;
     margin-left: auto;
     background-color: $background-color-hero;
@@ -19,18 +19,15 @@
     background-position: center;
     background-size: cover;
 
-    @media screen and (max-width: 479px) {
-      height: 400px;
-      
-    }
+   
 }
 .hero-section .container {
   padding-bottom: 0;
 
-  @media screen and (max-width: 479px) {
-      width: 480px;
+  @media screen and (max-width: 767px) {
+      width: 100%;
       height: 400px;
-      display: inline-block;
+      display: block;
       align-items: center;
       text-align: center;
       
@@ -53,9 +50,10 @@
   text-transform: uppercase;
   color: $white;
 
-@media screen and (max-width: 479px) {
-  // padding: 118px 60px 30px 60px;
-  margin-top: 118px;
+@media screen and (max-width: 767px) {
+  padding-top: 118px;
+  max-width: 360px;
+  // margin-top: 118px;
       font-weight: 900;
       font-size: 26px;
       line-height: calc(42/26);
@@ -91,7 +89,7 @@
     color: $brand-color;
   }
 
-    @media screen and (max-width: 479px) {
+    @media screen and (max-width: 767px) {
       margin-bottom: 118px;
     }
 }

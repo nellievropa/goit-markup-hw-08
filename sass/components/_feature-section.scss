@@ -4,11 +4,11 @@
 
     @media screen and (max-width: 479px) {
         padding-top: 60px;
-        padding-bottom: 0;
-        width: 480px;
+        padding-bottom: 60px;
+        max-width: 480px;
+        width: 100%;
     }
     
-
 }
 
 .feature-section .container {
@@ -83,7 +83,9 @@
     text-transform: uppercase;
 
     @media screen and (max-width: 479px) {
-        display: inline-block;
+        display: block;
+        align-items: center;
+        text-align: center;
         margin-left: auto;
         margin-right: auto;
     }
