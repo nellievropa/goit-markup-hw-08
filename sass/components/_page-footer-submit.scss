@@ -1,13 +1,13 @@
 .page-footer-submit {
     display: block;
     // width: 570px;
-    @media screen and (max-width: 767px) {
+    @media (min-width: 320px) and (max-width: 767px) {
         display: block;
         align-items: center;
         text-align: center;
         margin-left: auto;
         margin-right: auto;
-       max-width: 450px;
+        max-width: 450px;
         
     }
 }
@@ -24,7 +24,7 @@
     text-transform: uppercase;
     color: $white;
 
-    @media screen and (max-width: 767px) {
+    @media (min-width: 320px) and (max-width: 767px) {
         display: block;
         align-items: center;
       
@@ -39,7 +39,7 @@
     justify-content: space-between;
     margin: 0;
 
-    @media screen and (max-width: 767px) {
+    @media (min-width: 320px) and (max-width: 767px) {
         display: block;
        max-width: 450px;
         
@@ -58,11 +58,12 @@
     background-color: $background-color;
     color: rgba(255, 255, 255, 0.6);
 
-    @media screen and (max-width: 767px) {
+    @media (min-width: 320px) and (max-width: 767px) {
         // display: block;
        max-width: 450px;
        width: 100%;
        margin-bottom: 20px;
+       margin-right: 0;
         
     }
 

@@ -802,17 +802,26 @@ a {
   flex-direction: row;
   justify-content: flex-start;
 }
-@media screen and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .page-footer .container {
     display: block;
     width: 100%;
     align-items: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .page-footer .container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }
 
 .page-footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
   background-color: #2f303a;
 }
 
@@ -823,7 +832,7 @@ a {
   margin-right: 70px;
   width: 231px;
 }
-@media screen and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .page-footer__address {
     display: block;
     align-items: center;
@@ -831,6 +840,16 @@ a {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 60px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .page-footer__address {
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+    margin-left: 76px;
+    margin-right: 0;
+    max-width: 232px;
   }
 }
 
@@ -851,14 +870,14 @@ a {
   letter-spacing: 0.03em;
   cursor: pointer;
 }
-@media screen and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .page-footer__address-link {
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 20px;
   }
 }
-
 .page-footer-nav__list {
   margin-top: 9px;
   margin-bottom: 0;
@@ -944,7 +963,7 @@ a {
 .page-footer-submit {
   display: block;
 }
-@media screen and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .page-footer-submit {
     display: block;
     align-items: center;
@@ -967,7 +986,7 @@ a {
   text-transform: uppercase;
   color: #ffffff;
 }
-@media screen and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .page-footer-submit__title {
     display: block;
     align-items: center;
@@ -980,7 +999,7 @@ a {
   justify-content: space-between;
   margin: 0;
 }
-@media screen and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .page-footer-submit__form {
     display: block;
     max-width: 450px;
@@ -999,11 +1018,12 @@ a {
   background-color: #2f303a;
   color: rgba(255, 255, 255, 0.6);
 }
-@media screen and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .page-footer-submit__label input {
     max-width: 450px;
     width: 100%;
     margin-bottom: 20px;
+    margin-right: 0;
   }
 }
 
