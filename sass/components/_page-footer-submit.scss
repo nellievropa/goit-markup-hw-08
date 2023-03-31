@@ -1,6 +1,6 @@
 .page-footer-submit {
     display: block;
-    // width: 570px;
+    width: 570px;
     @media (min-width: 320px) and (max-width: 767px) {
         display: block;
         align-items: center;
@@ -9,6 +9,16 @@
         margin-right: auto;
         max-width: 450px;
         
+    }
+    @media (min-width: 768px) and (max-width: 1199px) {
+        display: block;
+        align-items: center;
+        text-align: center;
+        max-width: 450px;
+        
+        margin-top: 60px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -24,13 +34,14 @@
     text-transform: uppercase;
     color: $white;
 
-    @media (min-width: 320px) and (max-width: 767px) {
+    @media (min-width: 320px) and (max-width: 1199px) {
         display: block;
         align-items: center;
       
        max-width: 450px;
         
     }
+  
 }
 
 
@@ -39,11 +50,12 @@
     justify-content: space-between;
     margin: 0;
 
-    @media (min-width: 320px) and (max-width: 767px) {
+    @media (min-width: 320px) and (max-width: 1199px) {
         display: block;
        max-width: 450px;
         
     }
+ 
 }
 
 .page-footer-submit__label input {
@@ -58,15 +70,15 @@
     background-color: $background-color;
     color: rgba(255, 255, 255, 0.6);
 
-    @media (min-width: 320px) and (max-width: 767px) {
-        // display: block;
+    @media (min-width: 320px) and (max-width: 1199px) {
+       
        max-width: 450px;
        width: 100%;
        margin-bottom: 20px;
        margin-right: 0;
         
     }
-
+    
 }
 
 .page-footer-submit__input:hover,
