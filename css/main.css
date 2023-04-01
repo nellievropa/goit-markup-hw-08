@@ -653,70 +653,76 @@ a {
 }
 
 .section-clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (min-width: 480px) {
   .section-clients {
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
     max-width: 480px;
-    padding-top: 60px;
-    padding-bottom: 60px;
   }
 }
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 768px) {
   .section-clients {
     max-width: 768px;
-    margin-left: auto;
-    margin-right: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section-clients {
+    max-width: 1200px;
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
 
 .section-clients__title {
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.1666666667;
+  font-size: 28px;
+  line-height: 1.1785714286;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (min-width: 1200px) {
   .section-clients__title {
-    font-size: 28px;
-    line-height: 1.1785714286;
-    margin-bottom: 30px;
+    font-size: 36px;
+    line-height: 1.1666666667;
+    margin-bottom: 50px;
   }
 }
 
 /* ul */
 .section-clients__list {
-  display: inline-flex;
-  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 0;
   margin-top: 0;
   padding: 0;
   list-style: none;
+  max-width: 320px;
+  margin: -15px;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (min-width: 480px) {
   .section-clients__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     max-width: 480px;
-    margin: -15px;
   }
 }
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 768px) {
   .section-clients__list {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -15px;
-    max-width: 1199px;
+    max-width: 768px;
+  }
+}
+@media (min-width: 1200px) {
+  .section-clients__list {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1200px;
   }
 }
 
@@ -725,32 +731,34 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-right: 30px;
+  flex-basis: calc((100% - 60px) / 2);
+  margin: 15px;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (min-width: 480px) {
   .section-clients__item {
     flex-basis: calc((100% - 60px) / 2);
     margin: 15px;
   }
 }
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 768px) {
   .section-clients__item {
     flex-basis: calc((100% - 90px) / 3);
     margin: 15px;
   }
 }
-
-.section-clients__item:nth-child(6) {
-  margin-right: 0;
-}
-@media (min-width: 320px) and (max-width: 767px) {
-  .section-clients__item:nth-child(6) {
-    margin-right: 15px;
+@media (min-width: 1200px) {
+  .section-clients__item {
+    flex-basis: calc((100% - 180px) / 6);
+    margin: 15px;
   }
 }
-@media (min-width: 768px) and (max-width: 1200px) {
+
+.section-clients__item:nth-child(6) {
+  margin-right: 15px;
+}
+@media (min-width: 1200px) {
   .section-clients__item:nth-child(6) {
-    margin-right: 15px;
+    margin-right: 0;
   }
 }
 
@@ -759,27 +767,34 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 170px;
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
   fill: #afb1b8;
+  width: 100%;
+  padding: 16px 20px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .section-clients__link:hover, .section-clients__link:focus {
   fill: #2196f3;
   border-color: #2196f3;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (min-width: 480px) {
   .section-clients__link {
     width: 100%;
     padding: 16px 51px;
   }
 }
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 768px) {
   .section-clients__link {
     width: 100%;
     padding: 16px 59px;
+  }
+}
+@media (min-width: 1200px) {
+  .section-clients__link {
+    width: 100%;
+    padding: 16px 31px;
   }
 }
 
@@ -1091,6 +1106,7 @@ a {
   .page-footer-submit__form {
     display: block;
     max-width: 450px;
+    width: 100%;
   }
 }
 
@@ -1108,7 +1124,6 @@ a {
 }
 @media (min-width: 320px) and (max-width: 1199px) {
   .page-footer-submit__label input {
-    max-width: 450px;
     width: 100%;
     margin-bottom: 20px;
     margin-right: 0;

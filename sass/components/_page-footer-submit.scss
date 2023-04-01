@@ -52,7 +52,9 @@
 
     @media (min-width: 320px) and (max-width: 1199px) {
         display: block;
+
        max-width: 450px;
+       width: 100%;
         
     }
  
@@ -72,7 +74,7 @@
 
     @media (min-width: 320px) and (max-width: 1199px) {
        
-       max-width: 450px;
+    //    max-width: 450px;
        width: 100%;
        margin-bottom: 20px;
        margin-right: 0;
