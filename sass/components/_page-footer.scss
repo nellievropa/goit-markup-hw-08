@@ -1,57 +1,66 @@
 .page-footer .container {
-    display: flex;
-    align-items: baseline;
-    flex-direction: row;
-    justify-content: flex-start;
-
-    padding-top: 94px;
-    padding-bottom: 94px;
-
-    @media (min-width: 320px) and (max-width: 767px) {
         display: block;
         width: 100%;
         align-items: center;
         padding-top: 60px;
         padding-bottom: 60px;
 
-    }
-    @media (min-width: 768px) and (max-width: 1199px) {
+   
+    @media (min-width: 768px)  {
         display: flex;
         flex-wrap: wrap;
-       max-width: 1199px;
+       
+       max-width: 768px;
         width: 100%;
         align-items: center;
-        padding-top: 60px;
-        padding-bottom: 60px;
+     
+    }
+
+    @media (min-width: 1200px) {
+        display: flex;
+            align-items: baseline;
+            flex-direction: row;
+            justify-content: flex-start;
+            max-width: 1200px;
+            width: 100%;
+
+    padding-top: 30px;
+    padding-bottom: 54px;
+    margin-left: auto;
+    margin-right: auto;
+        
     }
 }
 
 .page-footer {
-    // padding-top: 60px;
-    // padding-bottom: 60px;
+   
     background-color: $background-color;
 }
 
 .page-footer__address {
     display: block;
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 70px;
+    
     width: 231px;
 
-    @media (min-width: 320px) and (max-width: 1199px) {
-        display: block;
         align-items: center;
         text-align: center;
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 60px;
                
-    }
+  
 
-    @media (min-width: 768px) and (max-width: 1199px) {
+    @media (min-width: 768px)  {
         margin-bottom: 0;
         margin-left: 76px;
+    }
+
+    @media (min-width: 1200px) {
+        margin-top: 0;
+            margin-left: 0;
+            margin-right: 70px;
+
+        
     }
  }
 
@@ -65,23 +74,22 @@
 }
 
 .page-footer__address-link {
-    margin-top: 28px;
+  
     color: $white;
     font-style: normal;
     font-size: 14px;
     line-height: calc(24 / 14);
     letter-spacing: 0.03em;
     cursor: pointer;
-
-    @media (min-width: 320px)  and (max-width: 767px) {
+    
         display: inline-block;
         margin-left: auto;
         margin-right: auto;
         margin-top: 20px;
        
-    }
-    @media (min-width: 768px) and (max-width: 1199px) {
-     
+        @media (min-width: 1200px) {
+        margin-left: 0;
+        margin-top: 28px;
     }
 
 }
