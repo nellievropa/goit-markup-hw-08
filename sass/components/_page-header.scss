@@ -9,19 +9,24 @@
   /* justify-content: space-between; */
 }
 .container.main-nav {
-  position: relative;
-  padding-bottom: 0;
-
-  // padding: 94px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-left: auto;
   margin-right: auto;
+}
 
-  @media screen and (max-width: 479px) {
-    width: 480px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
- 
-    
+.menu {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
   }
+@media (max-width: 768px) {
+.menu {
+display: none;
+}
+  
+
 }

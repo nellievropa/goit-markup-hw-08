@@ -32,15 +32,11 @@
          <!-- Кнопка і вікно для мобільної версії-->
         <button
         type="button"
-        class="menu-button"
+        class="menu-toggle js-open-menu"
         aria-expanded="false"
-        aria-controls="menu-container"
+        aria-controls="mobile-menu"
         data-menu-button >
         <svg width="40" height="40" aria-label="Перемикач мобільного меню">
-          <use
-            class="icon-close"
-            href="./images/sprite.svg#icon-close-18dp"
-          ></use>
           <use
             class="icon-menu"
             href="./images/sprite.svg#icon-menu_40px"
@@ -48,9 +44,8 @@
         </svg>
        </button>
 
-        <!-- site-nav -->
-        <div class="menu-container " id="menu-container" data-menu>
-          <div class="navigation">
+          <div class="menu">
+             <!-- site-nav -->
             <ul class="site-nav">
               <li class="site-nav__item">
                 <a
@@ -66,9 +61,9 @@
                 <a href="#" class="site-nav__link">Контакти</a>
               </li>
             </ul>
-          </div>
-          <!-- contact-nav -->
-          <div class="contacts">
+          
+             <!-- contact-nav -->
+          
             <ul class="contact-nav">
               <li class="contact-nav__item">
                 <a href="mailto:info@devstudio.com" class="contact-nav__link"
@@ -86,15 +81,69 @@
               </li>
             </ul>
           </div>
-        </div>
-           <!-- <div class="menu-container" id="menu-container" data-menu>
-          Контент меню
-        </div> -->
+            
       </div>
     </header>
 
     <!-- main -->
     <main>
+
+      <!-- Мобільне вікно -->
+              <div class="menu-container js-menu-container" id="mobile-menu" data-menu>
+            <button
+        type="button"
+        class="menu-toggle js-close-menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        data-menu-button >
+        <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+          <use
+            class="icon-close"
+            href="./images/sprite.svg#icon-close-18dp"
+          ></use>
+        </svg>
+       </button>
+
+          <div class="mobile-menu">
+             <!-- site-nav -->
+            <ul class="mobile-site-nav">
+              <li class="mobile-site-nav__item">
+                <a
+                  href="./index.html"
+                  class="mobile-site-nav__link--current"
+                  >Студія</a
+                >
+              </li>
+              <li class="mobile-site-nav__item">
+                <a href="./portofolio.html" class="mobile-site-nav__link">Портфоліо</a>
+              </li>
+              <li class="mobile-site-nav__item">
+                <a href="#" class="mobile-site-nav__link">Контакти</a>
+              </li>
+            </ul>
+          
+             <!-- contact-nav -->
+          
+            <ul class="mobile-contact-nav">
+                <li class="mobile-contact-nav__item">
+                <a href="tel:+380961111111" class="mobile-contact-nav__link-tel"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+              <li class="mobile-contact-nav__item">
+                <a href="mailto:info@devstudio.com" class="mobile-contact-nav__link"
+                  >info@devstudio.com</a
+                >
+              </li>            
+            </ul>
+            <ul class="mobile-social-nav-set">
+              <li class="mobile-social-nav">Instagram</li>
+              <li class="mobile-social-nav">Twitter</li>
+              <li class="mobile-social-nav">Facebook</li>
+              <li class="mobile-social-nav">LinkedIn</li>
+            </ul>
+          </div>
+        </div>
       <!-- Hero section-->
       <section class="hero-section">
         <div class="container">
@@ -178,12 +227,18 @@
           <ul class="section-work__list">
             <!-- first place -->
             <li class="section-work__item">
-              <img
+              <picture>
+                <source srcset="./images/Works/work-place.jpg 1x, ./images/Work/work-place@2x.jpg 2x"
+                media="(min-width:1200px)"
+                type="image/jpeg" >
+               <img
                 src="./images/Works/work-place.jpg"
                 width="370"
                 class="section-work__photo"
-                alt="Поверхня робочого столу з відкритим ноутбуком та робочими матеріалами"
-              />
+                alt="Поверхня робочого столу з відкритим ноутбуком та робочими матеріалами"/>
+                          
+              </picture>
+                         
               <div class="section-work__descr-position">
                 <p class="section-work__descr-position-text">
                   Десктопні додатки
@@ -193,12 +248,19 @@
 
             <!-- second place -->
             <li class="section-work__item">
-              <img
+              <picture>
+                <source srcset="./images/Works/mobil-project.jpg 1x, ./images/Work/mobil-project@2x.jpg 2x"
+                media="(min-width:1200px)"
+            type="image/jpeg" >
+             <img
                 src="./images/Works/mobil-project.jpg"
                 width="370"
                 class="section-work__photo"
                 alt="Відкритий ноутбук з варіантами розмітки екранів телефонів"
               />
+            
+              </picture>
+             
               <div class="section-work__descr-position">
                 <p class="section-work__descr-position-text">
                   Мобільні додатки
@@ -208,12 +270,18 @@
 
             <!-- third place -->
             <li class="section-work__item">
-              <img
-                src="./images/Works/planshet-project.jpg"
+              <picture>
+                <source srcset="./images/Works/tablet-project.jpg 1x, ./images/Work/tablet-project@2x.jpg 2x"
+                media="(min-width:1200px)"
+            type="image/jpeg">
+             <img
+                src="./images/Works/tablet-project.jpg"
                 width="370"
                 class="section-work__photo"
                 alt="Планшет з палітрою кольорів"
               />
+              </picture>
+             
               <div class="section-work__descr-position">
                 <p class="section-work__descr-position-text">
                   Дизайнерські рішення

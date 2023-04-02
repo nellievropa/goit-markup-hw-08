@@ -1,14 +1,13 @@
 /* ul */
 .site-nav {
     display: flex;
+    align-items: center;
     padding: 0;
     margin: 0;
     margin-left: 93px;
     list-style: none;
     
-    @media (max-width: 767px) {
-        display: none;
-      }
+
   }
   /* li */
 .site-nav__item:not(:last-child) {

@@ -1,8 +1,12 @@
 .section-work {
-  padding-bottom: 94px;
-
-@media (max-width: 1200px) {
+   
+    @media (max-width: 1199px) {
         display: none;
+    }
+
+    @media (min-width: 1200px) {
+        padding-bottom: 94px;
+        
     }
 }
 
