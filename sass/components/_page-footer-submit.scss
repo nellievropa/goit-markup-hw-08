@@ -62,13 +62,12 @@ display: block;
     }
 
     @media (min-width: 1200px) {
-        display: inline-flex;
-            flex-direction: row;
-            align-items: center;
-margin-right: auto;
-margin-left: auto;
-
-        
+        display: flex;
+            justify-content: space-between;
+            margin: 0;
+            max-width: 570px;
+            width: 100%;
+              
     }
  
 }
@@ -93,7 +92,7 @@ margin-left: auto;
         
     }
     @media (min-width: 1200px) {
-        max-width: 358px;
+        width: 358px;
         // width: 100%;
 
         margin-right: 12px;
