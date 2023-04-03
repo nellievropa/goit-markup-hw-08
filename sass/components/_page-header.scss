@@ -11,9 +11,13 @@
 .container.main-nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  
   margin-left: auto;
   margin-right: auto;
+
+  @media (max-width: 767px) {
+    justify-content: space-between;
+  }
 }
 
 .menu {
@@ -21,6 +25,7 @@
   padding: 0;
   margin: 0;
   list-style: none;
+  margin-left: 93px;
 
   }
 @media (max-width: 768px) {

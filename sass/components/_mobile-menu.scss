@@ -13,7 +13,7 @@
     
         z-index: 9;
     
-        transform: translateX(100%);
+        transform: translateX(150%);
         transition: transform 250ms ease-in-out;
 
 }
@@ -41,6 +41,8 @@
     border: none;
     border-radius: 50%;
     outline: none;
+
+    transition: fill 250ms $timing-function;
  
 }
 @media (min-width: 768px) {
@@ -53,6 +55,7 @@
 .menu-toggle:hover,
 .menu-toggle:focus {
     fill: $brand-color;
+    transition: fill 250ms $timing-function;
 }
 .menu-toggle.js-close-menu{
     position: absolute;
@@ -67,11 +70,14 @@
 
 .mobile-site-nav {
     display: block;
-    // flex-direction: column;
-    // justify-content: flex-start;
-    width: 219px;
+    // margin-left: 0;
+
+    @media (min-width: 480px) {
+        width: 219px;
     margin-top: 48px;
     margin-left: 40px;
+    }
+    
 
 }
 // li
@@ -95,6 +101,7 @@
 
         &--current {
             color: $brand-color;
+            font-weight: 500;
             font-size: 40px;
             line-height: calc(47 / 40);
         }
@@ -119,6 +126,7 @@
         color: $text-color-gray;
 }
 .mobile-contact-nav__link-tel {
+        font-weight: 500;
         font-size: 34px;
         line-height: calc(40 / 34);
        color: $brand-color;
@@ -137,7 +145,14 @@
         line-height: calc(22 / 18);
         letter-spacing: 0.02em;
         color: $brand-color;
-        margin-right: 20px;
+        margin-right: 10px;
+        padding-right: 10px;
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
 
 
+}
+.mobile-social-nav:last-child {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
 }
