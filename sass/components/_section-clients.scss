@@ -44,27 +44,28 @@
 /* ul */
 .section-clients__list {
     display: flex;
-    flex-wrap: wrap;
-    // justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+   
     margin-bottom: 0;
     margin-top: 0;
     padding: 0;
 
     list-style: none;
-    // max-width: 320px;
+   
         margin: -15px;
 
     @media (min-width: 480px)  {
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
                  
           max-width: 480px;
-        //   margin: -15px;               
+            
         }
         @media (min-width: 768px)  {
-      
-            // margin: -15px;  
+                 
             max-width: 768px; 
         }
 
@@ -72,9 +73,7 @@
     display: inline-flex;
     flex-direction: row;
     justify-content: space-between;
-    // margin: -15px;
-    max-width: 1200px;
-            
+    max-width: 1200px;            
         }
      
 }
