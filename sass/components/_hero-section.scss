@@ -14,7 +14,7 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../images/Hero_img/mobile_header.jpg);
+      url(../images/Hero_img/Mobile_Header.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -26,7 +26,7 @@
   .hero-section {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)),
-    url(../images/Hero_img/mobile_header@2x.jpg);
+    url(../images/Hero_img/Mobile_Header@2x.jpg);
   }
   
 }
@@ -34,14 +34,14 @@
 .hero-section {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)),
-    url(../images/Hero_img/tablet_header.jpg);
+    url(../images/Hero_img/Tablet_Header.jpg);
   }
 
   @media (min-resolution: 2dppx) {
       .hero-section {
         background-image: linear-gradient(rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)),
-         url(../images/Hero_img/tablet_header@2x.jpg);
+         url(../images/Hero_img/Tablet_Header@2x.jpg);
       }
     }
  
@@ -96,8 +96,8 @@
   text-transform: uppercase;
   color: $white;
 
-    width: 280px;
-   font-size: 700;
+    width: 100%;
+   font-weight: 500;
 
   @media (min-width: 480px) {
     width: 360px;

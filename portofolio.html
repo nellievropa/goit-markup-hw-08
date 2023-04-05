@@ -25,40 +25,124 @@
     <!-- Header -->
     <header class="page-header">
       <div class="container main-nav">
-
         <a href="./index.html" class="logo"
           ><span class="logo__text-brand">Web</span>Studio</a
         >
-<!-- site-nav -->
-        <ul class="site-nav">
-          <li class="site-nav__item"><a href="./index.html" class="site-nav__link">Студія</a></li>
-          <li class="site-nav__item">
-            <a href="./portofolio.html" class="site-nav__link site-nav__link--current">Портфоліо</a>
-          </li>
-          <li class="site-nav__item"><a href="#" class="site-nav__link">Контакти</a></li>
-        </ul>
+         <!-- Кнопка і вікно для мобільної версії-->
+        <button
+        type="button"
+        class="menu-toggle js-open-menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        data-menu-button >
+        <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+          <use
+            class="icon-menu"
+            href="./images/sprite.svg#icon-menu_40px"
+          ></use>
+        </svg>
+       </button>
 
-        <!-- contact-nav -->
-
-        <ul class="contact-nav">
-          <li class="contact-nav__item">
-            <a href="mailto:info@devstudio.com" class="contact-nav__link"
-              ><svg class="contact-nav__icon" width="16" height="12">
-                <use href="./images/sprite.svg#envelope"></use></svg
-              >info@devstudio.com</a
-            >
-          </li>
-          <li class="contact-nav__item">
-            <a href="tel:+380961111111" class="contact-nav__link"
-              ><svg class="contact-nav__icon" width="10" height="16">
-                <use href="./images/sprite.svg#smartphone"></use></svg
-              >+38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+          <div class="menu">
+             <!-- site-nav -->
+            <ul class="site-nav">
+              <li class="site-nav__item">
+                <a
+                  href="./index.html"
+                  class="site-nav__link"
+                  >Студія</a
+                >
+              </li>
+              <li class="site-nav__item">
+                <a href="./portofolio.html" class="site-nav__link site-nav__link--current">Портфоліо</a>
+              </li>
+              <li class="site-nav__item">
+                <a href="#" class="site-nav__link">Контакти</a>
+              </li>
+            </ul>
+          
+             <!-- contact-nav -->
+          
+            <ul class="contact-nav">
+              <li class="contact-nav__item">
+                <a href="mailto:info@devstudio.com" class="contact-nav__link"
+                  ><svg class="contact-nav__icon" width="16" height="12">
+                    <use href="./images/sprite.svg#envelope"></use></svg
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="contact-nav__item">
+                <a href="tel:+380961111111" class="contact-nav__link"
+                  ><svg class="contact-nav__icon" width="10" height="16">
+                    <use href="./images/sprite.svg#smartphone"></use></svg
+                  >+38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+          </div>
+            
       </div>
     </header>
     <!-- main -->
+
+    <!-- Мобільне вікно -->
+    <div class="menu-container js-menu-container" id="mobile-menu" data-menu>
+      <button
+  type="button"
+  class="menu-toggle js-close-menu"
+  aria-expanded="false"
+  aria-controls="mobile-menu"
+  data-menu-button >
+  <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+    <use
+      class="icon-close"
+      href="./images/sprite.svg#icon-close-18dp"
+    ></use>
+  </svg>
+ </button>
+
+    <div class="mobile-menu">
+       <!-- site-nav -->
+      <ul class="mobile-site-nav">
+        <li class="mobile-site-nav__item">
+          <a
+            href="./index.html"
+            class="mobile-site-nav__link"
+            >Студія</a
+          >
+        </li>
+        <li class="mobile-site-nav__item">
+          <a href="./portofolio.html" class="mobile-site-nav__link--current">Портфоліо</a>
+        </li>
+        <li class="mobile-site-nav__item">
+          <a href="#" class="mobile-site-nav__link">Контакти</a>
+        </li>
+      </ul>
+    
+       <!-- contact-nav -->
+    
+      <ul class="mobile-contact-nav">
+          <li class="mobile-contact-nav__item">
+          <a href="tel:+380961111111" class="mobile-contact-nav__link-tel"
+            >+38 096 111 11 11</a
+          >
+        </li>
+        <li class="mobile-contact-nav__item">
+          <a href="mailto:info@devstudio.com" class="mobile-contact-nav__link"
+            >info@devstudio.com</a
+          >
+        </li>            
+      </ul>
+      <ul class="mobile-social-nav-set">
+        <li class="mobile-social-nav">Instagram</li>
+        <li class="mobile-social-nav">Twitter</li>
+        <li class="mobile-social-nav">Facebook</li>
+        <li class="mobile-social-nav">LinkedIn</li>
+      </ul>
+    </div>
+  </div>
+
+
     <main>
       <h1 class="visually-hidden">Portpholio page</h1>
       <section class="portfolio">
@@ -86,17 +170,31 @@
 
           <!-- List of work exemples -->
           <ul class="portfolio-page__work-list">
+               <!-- 1 card -->
             <li class="portfolio-page__work-item">
               <a class="portfolio-page__work-link" href="">
                 <!-- overlay -->
                 <div class="portfolio-page__product-thumb">
-                  <img
-                    class="work-item-link"
-                    src="./images/portfolio/technokriak.jpg"
-                    width="370"
-                    height="294"
+               
+                  <picture>
+                    <source srcset="./images/portfolio/technokriak-370.jpg 1x, ./images/portfolio/technokriak@2x-370.jpg 2x"
+                    media="(min-width:1200px)"
+                    type="image/jpeg"/>
+                    <source srcset="./images/portfolio/technokriak-354.jpg 1x, ./images/portfolio/technokriak@2x-354.jpg 2x"
+                    media="(min-width:768px)"
+                    type="image/jpeg"/>
+                    <source srcset="./images/portfolio/technokriak-450.jpg 1x, ./images/portfolio/technokriak@2x-450.jpg 2x"
+                    media="(max-width:768px)"
+                    type="image/jpeg"/>
+
+                    <img
+                    class="portfolio-item-photo"
+                    src="./images/portfolio/technokriak-370.jpg"
                     alt="Сторінка сайту відкрита на ноутбуці з фото команди"
                   />
+
+                  </picture>
+                 
                   <div class="portfolio-page__product-overlay">
                     <p class="portfolio-page__product-overlay-descr">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -113,16 +211,30 @@
                 </div></a
               >
             </li>
+               <!-- 2 card -->
 
             <li class="portfolio-page__work-item">
               <a class="portfolio-page__work-link" href="">
                 <div class="portfolio-page__product-thumb">
-                  <img
-                    src="./images/portfolio/new-orlean.jpg"
-                    width="370"
-                    height="294"
+                  <picture>
+                    <source srcset="./images/portfolio/new-orlean-370.jpg 1x, ./images/portfolio/new-orlean@2x-370.jpg 2x"
+                    media="(min-width:1200px)"
+                    type="image/jpeg"/>
+                    <source srcset="./images/portfolio/new-orlean-354.jpg 1x, ./images/portfolio/new-orlean@2x-354.jpg 2x"
+                    media="(min-width:768px)"
+                    type="image/jpeg"/>
+                    <source srcset="./images/portfolio/new-orlean-450.jpg 1x, ./images/portfolio/new-orlean@2x-450.jpg 2x"
+                    media="(max-width:768px)"
+                    type="image/jpeg"/>
+
+                    <img
+                    src="./images/portfolio/new-orlean-370.jpg"
+                    class="portfolio-item-photo"
                     alt="Два баскетболісти з мячем"
                   />
+
+                  </picture>
+                
                   <div class="portfolio-page__product-overlay">
                     <p class="portfolio-page__product-overlay-descr">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -139,15 +251,27 @@
               >
             </li>
 
+               <!-- 3 card -->
             <li class="portfolio-page__work-item">
               <a class="portfolio-page__work-link" href="">
                 <div class="portfolio-page__product-thumb">
+                <picture>
+                  <source srcset="./images/portfolio/seafood-370.jpg 1x, ./images/portfolio/seafood@2x-370.jpg 2x"
+                  media="(min-width:1200px)"
+                  type="image/jpeg"/>
+                  <source srcset="./images/portfolio/seafood-354.jpg 1x, ./images/portfolio/seafood@2x-354.jpg 2x"
+                  media="(min-width:768px)"
+                  type="image/jpeg"/>
+                  <source srcset="./images/portfolio/seafood-450.jpg 1x, ./images/portfolio/seafood@2x-450.jpg 2x"
+                  media="(max-width:768px)"
+                  type="image/jpeg"/>
+
                   <img
-                    src="./images/portfolio/seafood.jpg"
-                    width="370"
-                    height="294"
-                    alt="Макет логотипу ресторану Сиафуд"
-                  />
+                  src="./images/portfolio/seafood-370.jpg"
+                  class="portfolio-item-photo"
+                  alt="Макет логотипу ресторану Сиафуд"
+                />
+                </picture>
                   <div class="portfolio-page__product-overlay">
                     <p class="portfolio-page__product-overlay-descr">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -163,16 +287,26 @@
                 </div></a
               >
             </li>
-
+   <!-- 4 card -->
             <li class="portfolio-page__work-item">
               <a class="portfolio-page__work-link" href="">
                 <div class="portfolio-page__product-thumb">
+                <picture>
+                  <source srcset="./images/portfolio/prime-370.jpg 1x, ./images/portfolio/prime@2x-370.jpg 2x"
+                  media="(min-width:1200px)"
+                  type="image/jpeg"/>
+                  <source srcset="./images/portfolio/prime-354.jpg 1x, ./images/portfolio/prime@2x-354.jpg 2x"
+                  media="(min-width:768px)"
+                  type="image/jpeg"/>
+                  <source srcset="./images/portfolio/prime-450.jpg 1x, ./images/portfolio/prime@2x-450.jpg 2x"
+                  media="(max-width:768px)"
+                  type="image/jpeg"/>
                   <img
-                    src="./images/portfolio/prime.jpg"
-                    width="370"
-                    height="294"
-                    alt="Фото навушників чорних"
-                  />
+                  src="./images/portfolio/prime-370.jpg"
+                  class="portfolio-item-photo"
+                  alt="Фото навушників чорних"
+                />
+                </picture>
                   <div class="portfolio-page__product-overlay">
                     <p class="portfolio-page__product-overlay-descr">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -188,15 +322,27 @@
                 </div></a
               >
             </li>
+               <!-- 5 card -->
             <li class="portfolio-page__work-item">
               <a class="portfolio-page__work-link" href="">
                 <div class="portfolio-page__product-thumb">
+                 <picture>
+                  <source srcset="./images/portfolio/boxes-370.jpg 1x, ./images/portfolio/boxes@2x-370.jpg 2x"
+                  media="(min-width:1200px)"
+                  type="image/jpeg"/>
+                  <source srcset="./images/portfolio/boxes-354.jpg 1x, ./images/portfolio/boxes@2x-354.jpg 2x"
+                  media="(min-width:768px)"
+                  type="image/jpeg"/>
+                  <source srcset="./images/portfolio/boxes-450.jpg 1x, ./images/portfolio/boxes@2x-450.jpg 2x"
+                  media="(max-width:768px)"
+                  type="image/jpeg"/>
+
                   <img
-                    src="./images/portfolio/boxes.jpg"
-                    width="370"
-                    height="294"
-                    alt="Фото двох коробок з лого проекту"
-                  />
+                  src="./images/portfolio/boxes-370.jpg"
+                  class="portfolio-item-photo"
+                  alt="Фото двох коробок з лого проекту"
+                />
+                 </picture>
                   <div class="portfolio-page__product-overlay">
                     <p class="portfolio-page__product-overlay-descr">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -212,15 +358,27 @@
                 </div></a
               >
             </li>
+               <!-- 6 card -->
             <li class="portfolio-page__work-item">
               <a class="portfolio-page__work-link" href="">
                 <div class="portfolio-page__product-thumb">
+                 <picture>
+                  <source srcset="./images/portfolio/inspiration-370.jpg 1x, ./images/portfolio/inspiration@2x-370.jpg 2x"
+                  media="(min-width:1200px)"
+                  type="image/jpeg"/>
+                  <source srcset="./images/portfolio/inspiration-354.jpg 1x, ./images/portfolio/inspiration@2x-354.jpg 2x"
+                  media="(min-width:768px)"
+                  type="image/jpeg"/>
+                  <source srcset="./images/portfolio/inspiration-450.jpg 1x, ./images/portfolio/inspiration@2x-450.jpg 2x"
+                  media="(max-width:768px)"
+                  type="image/jpeg"/>
+
                   <img
-                    src="./images/portfolio/inspiration-has-noborder.jpg"
-                    width="370"
-                    height="294"
-                    alt="Монітор з головною сторінкою сайту"
-                  />
+                  src="./images/portfolio/inspiration-370.jpg"
+                  class="portfolio-item-photo"
+                  alt="Монітор з головною сторінкою сайту"
+                />
+                 </picture>
                   <div class="portfolio-page__product-overlay">
                     <p class="portfolio-page__product-overlay-descr">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -236,15 +394,27 @@
                 </div></a
               >
             </li>
+               <!-- 7 card -->
             <li class="portfolio-page__work-item">
               <a class="portfolio-page__work-link" href="">
                 <div class="portfolio-page__product-thumb">
+                <picture>
+                  <source srcset="./images/portfolio/limited-editions-370.jpg 1x, ./images/portfolio/limited-editions@2x-370.jpg 2x"
+                  media="(min-width:1200px)"
+                  type="image/jpeg"/>
+                  <source srcset="./images/portfolio/limited-editions-354.jpg 1x, ./images/portfolio/limited-editions@2x-354.jpg 2x"
+                  media="(min-width:768px)"
+                  type="image/jpeg"/>
+                  <source srcset="./images/portfolio/limited-editions-450.jpg 1x, ./images/portfolio/limited-editions@2x-450.jpg 2x"
+                  media="(max-width:768px)"
+                  type="image/jpeg"/>
+
                   <img
-                    src="./images/portfolio/limited-editions.jpg"
-                    width="370"
-                    height="294"
-                    alt="Розгорнуте видання албому проекту"
-                  />
+                  src="./images/portfolio/limited-editions-370.jpg"
+                  class="portfolio-item-photo"
+                  alt="Розгорнуте видання албому проекту"
+                />
+                </picture>
                   <div class="portfolio-page__product-overlay">
                     <p class="portfolio-page__product-overlay-descr">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -260,15 +430,27 @@
                 </div></a
               >
             </li>
+               <!-- 8 card -->
             <li class="portfolio-page__work-item">
               <a class="portfolio-page__work-link" href="">
                 <div class="portfolio-page__product-thumb">
+                <picture>
+                  <source srcset="./images/portfolio/lab-370.jpg 1x, ./images/portfolio/lab@2x-370.jpg 2x"
+                  media="(min-width:1200px)"
+                  type="image/jpeg"/>
+                  <source srcset="./images/portfolio/lab-354.jpg 1x, ./images/portfolio/lab@2x-354.jpg 2x"
+                  media="(min-width:768px)"
+                  type="image/jpeg"/>
+                  <source srcset="./images/portfolio/lab-450.jpg 1x, ./images/portfolio/lab@2x-450.jpg 2x"
+                  media="(max-width:768px)"
+                  type="image/jpeg"/>
+
                   <img
-                    src="./images/portfolio/lab.jpg"
-                    width="370"
-                    height="294"
-                    alt="Розроблений макет лейби бренду"
-                  />
+                  src="./images/portfolio/lab-370.jpg"
+                  class="portfolio-item-photo"
+                  alt="Розроблений макет лейби бренду"
+                />
+                </picture>
                   <div class="portfolio-page__product-overlay">
                     <p class="portfolio-page__product-overlay-descr">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -285,15 +467,28 @@
               >
             </li>
 
+               <!-- 9 card -->
             <li class="portfolio-page__work-item">
               <a class="portfolio-page__work-link" href="">
                 <div class="portfolio-page__product-thumb">
+                <picture>
+                  <source srcset="./images/portfolio/growing-business-370.jpg 1x, ./images/portfolio/growing-business@2x-370.jpg 2x"
+                  media="(min-width:1200px)"
+                  type="image/jpeg"/>
+                  <source srcset="./images/portfolio/growing-business-354.jpg 1x, ./images/portfolio/growing-business@2x-354.jpg 2x"
+                  media="(min-width:768px)"
+                  type="image/jpeg"/>
+                  <source srcset="./images/portfolio/growing-business-450.jpg 1x, ./images/portfolio/growing-business@2x-450.jpg 2x"
+                  media="(max-width:768px)"
+                  type="image/jpeg"/>
+
                   <img
-                    src="./images/portfolio/growing-business.jpg"
-                    width="370"
-                    height="294"
-                    alt="На екрані ноутбука головна сторінка додатку"
-                  />
+                  src="./images/portfolio/growing-business-370.jpg"
+                  class="portfolio-item-photo"
+                  
+                  alt="На екрані ноутбука головна сторінка додатку"
+                />
+                </picture>
                   <div class="portfolio-page__product-overlay">
                     <p class="portfolio-page__product-overlay-descr">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -403,5 +598,6 @@
         
   
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
