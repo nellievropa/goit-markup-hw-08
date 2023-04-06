@@ -13,8 +13,7 @@
         @media screen and (max-width: 479px) {
                 padding-left: 15px;
                 padding-right: 15px;
-                // padding-bottom: 0;
-                width: 480px;
+                          
                 overflow-y: scroll;
             }
 }
@@ -32,6 +31,10 @@
 }
 
 .modal {
+    @media (min-width: 1200px) {
+        width: 528px;
+        height: 581px;
+    }
     position: absolute;
     top: 50%;
     left: 50%;
@@ -58,8 +61,10 @@
                top: 50%;
                left: 50%;
                transform: translate(-50%, -50%);
-                width: 450px;
-                height: 609px;
+                width: 300px;
+                height: 520px;
+
+                padding: 20px;
 
             }
 }
@@ -162,6 +167,17 @@
 /* Коментарі розділ */
 /* textarea */
 .comment-field {
+    @media (max-width: 479px) {
+        width: 100%;
+        height: 80px;
+        margin-top: 4px;
+        padding: 8px 12px;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        resize: none;
+    
+        transition: border-color 250ms $timing-function; 
+    }
     width: 100%;
     height: 120px;
     margin-top: 4px;
@@ -189,17 +205,20 @@
 /* Checkbox and Policy  */
 
 .checkbox-form-fild {
-
+@media (max-width: 479px) {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 16px;
+}
+    
     margin-bottom: 30px;
 
 }
 
 /* Label */
 .checkbox-conact-discr {
-    /* position: absolute; */
+    
     display: inline-block;
     align-items: center;
    
@@ -208,6 +227,14 @@
     letter-spacing: 0.03em;
 
     color: $text-color-gray;
+
+    @media (max-width: 478px) {
+    
+    font-size: 11px;
+    line-height: calc(12 / 11);
+    letter-spacing: 0.02em;
+        
+    }
 }
 
 /* Input */
@@ -226,6 +253,7 @@
 
 /* опис іконки чекбоксу */
 .checkbox-icon {
+      
     display: inline-block;
     margin-right: 8px;
     width: 16px;

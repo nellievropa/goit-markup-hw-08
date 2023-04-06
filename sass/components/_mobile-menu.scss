@@ -89,7 +89,23 @@
 // a
 
 .mobile-site-nav__link {
+@media (max-width: 479px) {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: calc(42 / 36);
+    letter-spacing: 0.02em;
+    color: $text-color-main;
+    text-decoration: none;
 
+    transition: color 250ms $timing-function;
+
+    &--current {
+        color: $brand-color;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: calc(42 / 36);
+    }
+}
         font-weight: 500;
         font-size: 40px;
         line-height: calc(47 / 40);
@@ -110,7 +126,7 @@
 
  .mobile-contact-nav {
     display: block;
-    margin-top: 288px;
+    margin-top: 160px;
     margin-left: 12px;
 
     @media (min-width: 480px) {
@@ -121,7 +137,12 @@
   
  }
 .mobile-contact-nav__item{
+    margin-bottom: 12px;
+
+@media (min-width: 480px) {
     margin-bottom: 32px;
+}
+    
 
 }
 
@@ -150,7 +171,7 @@
 .mobile-social-nav-set {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 48px;
+    margin-top: 24px;
     margin-left: 12px;
    
 
