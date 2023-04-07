@@ -70,18 +70,21 @@
     }
     @media (min-width: 1200px) {
         flex-basis: calc((100% - 8 * 15px) / 4);
-            // width: 354px;
-            margin: 15px;
-        // display: block;
-        // width: 270px;
-        // height: 248px;
-        // margin-right: 30px;
+        margin: 15px;
+        
         
     }
 }
 
 .feature-section__item:nth-child(4) {
-    margin-right: 0;
+    @media (max-width: 767px) {
+        margin-bottom: 0;
+        
+    }
+    @media (min-width: 1200px) {
+        margin-right: 0;
+    }
+ 
 }
 
 .feature-section__picture {
@@ -113,8 +116,6 @@
     top: 50%;
     transform: translate(-50%, -50%)
 }
-
-
 
 }
 .feature-section__title {
